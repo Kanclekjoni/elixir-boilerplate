@@ -1,0 +1,21 @@
+<div class="home">
+  <a target="_blank" href="https://github.com/mirego/elixir-boilerplate">
+    <.logo />
+  </a>
+
+  <.intro_paragraph />
+  <p><strong>Message:</strong> <%= @message %></p>
+
+  <hr />
+
+  <div style="display: flex; gap: 10px">
+    <button type="button" phx-click="decrement_counter">-</button>
+    <strong><%= @counter %></strong>
+    <button type="button" phx-click="increment_counter">+</button>
+  </div>
+
+  <hr />
+
+  <button type="button" phx-click="add_flash_success">Add flash success</button>
+  <button type="button" phx-click="add_flash_error">Add flash error</button>
+</div>

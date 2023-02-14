@@ -20,3 +20,10 @@
 .home p:last-child {
   margin-bottom: 0;
 }
+
+.flash-messages {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}

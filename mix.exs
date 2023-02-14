@@ -57,8 +57,9 @@ defmodule ElixirBoilerplate.Mixfile do
       {:corsica, "~> 1.3"},
 
       # Phoenix
-      {:phoenix, "~> 1.6"},
+      {:phoenix, "~> 1.7.0-rc.2", override: true},
       {:phoenix_html, "~> 3.2"},
+      {:phoenix_live_view, "~> 0.18"},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_live_reload, "~> 1.4", only: :dev},
       {:jason, "~> 1.2"},

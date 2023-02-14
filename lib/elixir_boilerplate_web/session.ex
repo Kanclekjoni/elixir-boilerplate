@@ -2,8 +2,12 @@ defmodule ElixirBoilerplateWeb.Session do
   def config do
     [
       store: :cookie,
-      key: Application.get_env(:elixir_boilerplate, ElixirBoilerplateWeb.Endpoint)[:session_key],
-      signing_salt: Application.get_env(:elixir_boilerplate, ElixirBoilerplateWeb.Endpoint)[:session_signing_salt]
+      key: app_config(:session_key),
+      signing_salt: app_config(:session_signing_salt)
     ]
+  end
+
+  defp app_config(key) do
+    Keyword.fetch!(Application.get_env(:elixir_boilerplate, ElixirBoilerplateWeb.Endpoint), key)
   end
 end
